@@ -15,7 +15,7 @@ def midi2tabs(file_path):
     low_notes_count = 0
     high_notes_count = 0
     for instrument in midi_data.instruments:
-        print(instrument)
+
         for note in instrument.notes:
 
             temp_tabs.append(note.velocity)
@@ -25,7 +25,7 @@ def midi2tabs(file_path):
     if len(temp_tabs) > 0:
         averageVelocity = sum(temp_tabs) / len(temp_tabs)
         averageTime = sum(temp_duration) / len(temp_duration)
-        print(averageVelocity, averageTime)
+
         for instrument in midi_data.instruments:
             i = 0
             for note in instrument.notes:
