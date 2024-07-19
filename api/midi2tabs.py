@@ -1,6 +1,6 @@
 from basic_pitch.inference import predict
 import pretty_midi
-
+import os 
 
 def midi2tabs(file_path):
 
@@ -8,7 +8,9 @@ def midi2tabs(file_path):
     model_output, midi_data, note_events = predict(file_path)
     midi_data.write('C:/Users/Zhanibek/Desktop/dombraAI/backend/dombra_backend/media/output.mid')
 
+        
     midi_data = pretty_midi.PrettyMIDI("C:/Users/Zhanibek/Desktop/dombraAI/backend/dombra_backend/media/output.mid")
+  
 
     temp_tabs = []
     temp_duration = []
