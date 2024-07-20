@@ -7,10 +7,16 @@ from .midi2tabs import midi2tabs
 from .models import File
 from .s3 import upload_file
 from django.core.files.storage import default_storage
+from django.views.decorators.csrf import csrf_exempt
 
 import tempfile
 
 import os
+
+@csrf_exempt
+def healthcheck(request):
+    print("Health check")
+    return Response("Hello world", safe=False, status=200)
 
 class FileUploadView(APIView):
     parser_classes = (MultiPartParser, FormParser)
