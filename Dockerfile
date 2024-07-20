@@ -9,6 +9,6 @@ RUN pip install -r requirements.txt
 RUN apt update && \
   apt-get install -y libsndfile-dev ffmpeg lilypond
 
-COPY .. 
+COPY .. .
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
