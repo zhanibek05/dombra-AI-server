@@ -12,10 +12,9 @@ import tempfile
 
 import os
 
-
 class FileUploadView(APIView):
     parser_classes = (MultiPartParser, FormParser)
-
+    
     def post(self, request, *args, **kwargs):
         file_serializer = FileSerializer(data=request.data)
         if file_serializer.is_valid():

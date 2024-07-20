@@ -1,10 +1,14 @@
-FROM python:3.8.0
+FROM python:3.8.10
 
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
 
 RUN pip install -r requirements.txt
-COPY .. .
+
+RUN apt update && \
+  apt-get install -y libsndfile-dev ffmpeg lilypond
+
+COPY .. 
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
