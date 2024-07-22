@@ -7,7 +7,7 @@ COPY requirements.txt ./
 RUN pip install -r requirements.txt
 
 RUN apt update && \
-  apt-get install libsndfile1
+  apt-get install libsndfile-dev
 
 COPY .. .
 
