@@ -6,6 +6,8 @@ COPY requirements.txt ./
 
 RUN pip install -r requirements.txt
 
+RUN pip install pysndfile
+
 RUN apt update && \
   apt-get install -y libsndfile1-dev ffmpeg lilypond
 
