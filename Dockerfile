@@ -1,4 +1,4 @@
-FROM python:3.11.1
+FROM python:3.10.0
 
 WORKDIR /usr/src/app
 
@@ -9,7 +9,7 @@ RUN pip install -r requirements.txt
 
 
 RUN apt update && \
-  apt-get install -y libsndfile1-dev ffmpeg lilypond
+  apt-get install -y libsndfile1-dev ffmpeg lilypond libsox-fmt-all
 
 RUN pip install pysndfile
 
