@@ -9,7 +9,7 @@ def midi2tabs(file_path):
     midi_data.write('./media/output.mid')
 
         
-    midi_data = pretty_midi.PrettyMIDI("./media/output.mid")
+    midi_data = pretty_midi.PrettyMIDI("/media/output.mid")
   
 
     temp_tabs = []
