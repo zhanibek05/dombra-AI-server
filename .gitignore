@@ -1,2 +1,5 @@
 venv
 .venv
+api\test.py
+api\static
+.gitignore
