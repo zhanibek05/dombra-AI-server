@@ -6,10 +6,10 @@ def midi2tabs(file_path):
 
     dombyra_tabs = {}
     model_output, midi_data, note_events = predict(file_path)
-    midi_data.write('/home/ubuntu/dombra-AI-server/media/output.mid')
+    midi_data.write('./media/output.mid')
 
         
-    midi_data = pretty_midi.PrettyMIDI("/home/ubuntu/dombra-AI-server/media/output.mid")
+    midi_data = pretty_midi.PrettyMIDI("./media/output.mid")
   
 
     temp_tabs = []
